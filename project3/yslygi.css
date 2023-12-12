@@ -1,0 +1,353 @@
+.header {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  background: linear-gradient(to bottom, #0047AB, rgb(0, 0, 0));
+  color: #d8d8d8;
+  text-align: center;
+}
+
+.wave-group {
+  position: relative;
+}
+
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+  margin-top: 10px;
+}
+
+.wave-group .input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * .05s);
+}
+
+.wave-group .input:focus~label .label-char,
+.wave-group .input:valid~label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.wave-group .bar:before,
+.wave-group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: none;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus~.bar:before,
+.wave-group .input:focus~.bar:after {
+  width: 50%;
+}
+
+button {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  --primary-color: #0047AB;
+  --secondary-color: #ffffff;
+  --hover-color: #838383;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+
+  text-decoration: none;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
+
+
+h1 {
+  margin-right: 125px;
+}
+
+/* Логотип */
+td img {
+  float: left;
+  margin-left: 50px;
+}
+
+.border {
+  background-color: #000000;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Кнопки */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Кнопки футера влево */
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #d8d8d8;
+  text-align: center;
+  padding: 18px 20px;
+  text-decoration: none;
+}
+
+/* При наведении меняется цвет */
+li a:hover {
+  background-color: #0047AB;
+}
+
+.main {
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* Добавьте эту строку */
+  height: 135vh;
+  /* Добавьте эту строку */
+}
+
+
+/* Цвет текста для кнопок в разделе main */
+.main a {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #a0a0a0;
+  text-decoration: underline;
+  text-align: left;
+  line-height: 50px;
+  margin: 15px;
+}
+
+.main a:hover {
+  background-color: none;
+  margin: 30px;
+}
+
+.main img {
+
+  width: 300px;
+}
+
+
+
+.product {
+  width: 1100px;
+  display: flex;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  margin-left: 550px;
+  margin-top: -190px;
+}
+
+.product:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.product:hover {
+  transform: scale(1.01);
+  transition: transform 0.1s ease;
+}
+
+.product-image {
+  margin-top: 100px;
+  flex: 1;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.product-info {
+  flex: 2;
+  padding: 0 20px;
+}
+
+.product h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.product p {
+  font-size: 16px;
+}
+
+/* Стили для кнопки "Добавить в корзину" */
+.add-to-cart {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  float: right;
+}
+
+.add-to-cart:hover {
+  background-color: #034ab6;
+}
+
+.product h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.product2{
+  width: 1100px;
+  display: flex;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  margin-left: 550px;
+  margin-top: 50px;
+}
+
+.product2:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.product2:hover {
+  transform: scale(1.01);
+  transition: transform 0.1s ease;
+}
+.product-image2 {
+  margin-top: 150px;
+  flex: 1;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.product3{
+  width: 1100px;
+  display: flex;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  margin-left: 550px;
+  margin-top: 50px;
+}
+
+.product3:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.product3:hover {
+  transform: scale(1.01);
+  transition: transform 0.1s ease;
+}
+.product-image3 {
+  margin-top: 80px;
+  flex: 1;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+
+.footer {
+  background-color: #000000;
+  color: #d8d8d8;
+  text-align: center;
+  padding: 20px 0;
+  bottom: 0;
+}

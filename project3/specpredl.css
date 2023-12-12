@@ -1,0 +1,337 @@
+.header {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    background: linear-gradient(to bottom, #0047AB, rgb(0, 0, 0));
+    color: #d8d8d8;
+    text-align: center;
+}
+
+.wave-group {
+    position: relative;
+  }
+  
+  .wave-group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    margin-top: 10px;
+  }
+  
+  .wave-group .input:focus {
+    outline: none;
+  }
+  
+  .wave-group .label {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+  }
+  
+  .wave-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+  }
+  
+  .wave-group .input:focus ~ label .label-char,
+  .wave-group .input:valid ~ label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  .wave-group .bar {
+    position: relative;
+    display: block;
+    width: 200px;
+  }
+  
+  .wave-group .bar:before,.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: none;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  .wave-group .bar:before {
+    left: 50%;
+  }
+  
+  .wave-group .bar:after {
+    right: 50%;
+  }
+  
+  .wave-group .input:focus ~ .bar:before,
+  .wave-group .input:focus ~ .bar:after {
+    width: 50%;
+  }
+  
+  button {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    --primary-color: #0047AB;
+    --secondary-color: #ffffff;
+    --hover-color: #838383;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+
+    text-decoration:none;
+  }
+  
+  button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  button:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  button:hover .arrow:before {
+    right: 0;
+  }
+h1 {
+    margin-right: 125px;
+}
+
+/* Логотип */
+td img {
+    float: left;
+    margin-left: 50px;
+}
+
+.border {
+    background-color: #000000;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Кнопки */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Кнопки футера влево */
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #d8d8d8;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+
+/* При наведении меняется цвет */
+li a:hover {
+    background-color: #0047AB;
+}
+
+.main {
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+/* Цвет текста для кнопок в разделе main */
+.main a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #a0a0a0;
+    text-decoration: underline;
+    text-align: left;
+    line-height: 50px;
+    margin: 15px;
+}
+
+.main a:hover {
+    /* Не нужно указывать 'none' здесь */
+    margin: 30px;
+}
+
+.footer {
+    background-color: #000000;
+    color: #d8d8d8;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+}
+
+
+
+
+/* Стили для товаров в каталоге */
+.novosti {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    width: 600px; /* Увеличьте ширину окошка с описанием */
+    height: 500px; /* Увеличьте высоту окошка с описанием */
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #ffffff;
+    position: relative;
+}
+
+.novosti img {
+    width: 100%;
+    height: auto;
+}
+
+.description {
+    margin: 0;
+    padding: 10px;
+}
+
+/* Стили для взаимодействия при наведении */
+.novosti:hover {
+    transform: scale(1.09);
+}
+
+/* Стили для полного описания */
+.novosti .full-description {
+    display: none;
+    background-color: #ffffff;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px rgba(148, 147, 147, 0.5);
+}
+
+
+/* Добавьте следующие две стили для отображения полного описания */
+.novosti.active .description .full-description {
+    display: block;
+    background-color: #ff0000;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px rgba(148, 147, 147, 0.5);
+}
+
+.main .vse-novosti {
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 10vh;
+    margin-left: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.vse-novosti {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -100;
+    height: 50px;
+}
+
+
+.novosti {
+    width: 380px;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #ffffff;
+}
+
+
+.novosti .full-description h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
+.novosti .full-description p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+    font-size: 14px;
+
+}
+
+.novosti .full-description ol {
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+    font-size: 14px;
+    text-align: left;
+}
+
+.novosti .full-description small {
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+    font-size: 10px;
+}
+

@@ -1,0 +1,22 @@
+.itk-slider {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -100px;
+}
+
+.itk-slider .slide-img {
+    width: 50%;
+    height: 50%;
+}
+.btn-next{
+    width: 100px;
+    float: right;
+    margin-top: 200px;
+}
+.btn-prev{
+    width: 100px;
+    float: left;
+    margin-top: 200px;
+}
+
